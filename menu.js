@@ -19,6 +19,7 @@ const Litext = ["home" , "pricing" , "about us" , "blog"];
 ;
 const clickfuction = (event) => {
   const clickLiTag = event.target.id;
+  console.log(clickLiTag)
   const clickTakeIdtag = document.getElementById(clickLiTag);
   const clickliTagWidth = clickTakeIdtag.offsetWidth;
   const clickliTagLeft = clickTakeIdtag.offsetLeft;
@@ -28,16 +29,16 @@ const clickfuction = (event) => {
  switch(clickLiTag){
         case "0":
             allcontainerTag.style.display = "block";  
-            footercontainerTag.style.display = "block"  
+            footercontainerTag.style.display = "block";
             aboutcontainerTag.style.display = "none";  
             pricingcotainerTag.style.display = "none";  
             BlogcontainerTag.style.display = "none";
             changefunction();
             break;
-        case "1":   
+        case "1":  
+            pricingcotainerTag.style.display ="block"; 
+            pricingcotainerTag.style.display = "block";  
             allcontainerTag.style.display = "none"; 
-            pricingcotainerTag.style.display = "block"; 
-            footercontainerTag.style.display = "none"; 
             aboutcontainerTag.style.display = "none";
             BlogcontainerTag.style.display = "none";
             changefunction();

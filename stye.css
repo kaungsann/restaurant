@@ -72,7 +72,6 @@ li{
     margin-top: 100px;
 }
 .imagetest{
-
     color:white;
     max-width: 60%;
     margin: 0px auto;
@@ -351,6 +350,7 @@ p{
    
 }
 .bigbotton{
+    outline: none;
     width: 200px;
     font-size: 20px;
     font-weight: bold;
@@ -360,8 +360,10 @@ p{
     border-radius: 10px;
 }
 .buttonget{
+    outline: none;
+    width: 200px;
     background-color:#1F1F1F ;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     margin-top: 25px;
     padding: 30px;
@@ -442,14 +444,15 @@ p{
     margin-top: 40px;
 }
 .litext{
+
     font-size: 35px;
 }
 .top{
-    margin-top: 40px;
+    margin-top: 30px;
 }
 .bottOm{
  
-    margin-bottom: 20px;
+    margin-bottom: 15pxpx;
 }
 .bolder{
     font-weight: bolder;
@@ -465,7 +468,7 @@ p{
 .box{
     border-radius: 10px;
     width: 450px;
-    height: 800px;
+
     margin: 20px;
     background-color:white;
     
@@ -476,6 +479,7 @@ p{
     
 }
 .imgblog{
+
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 10px;
     width: 100%;
@@ -499,8 +503,13 @@ p{
 .colordark{
     color: darkgray;
 }
+
 @media (max-width:764px){
- 
+.image{
+    width: 100%;
+      height:700px
+
+    }
     .abouttext{
         margin-top: 50px;
     }
@@ -560,14 +569,15 @@ p{
       
   }
   .ultaginli:hover{
+      color: black;
       background-color: lightskyblue;
       border-radius: 15px;
   }
   .ulTagnew{
       max-width: 70%;
-    margin: 130px auto;
-    user-select: none;
-    cursor: pointer;
+      margin: 90px auto;
+      user-select: none;
+      cursor: pointer;
 
 
     font-size: 30px;
@@ -605,8 +615,124 @@ p{
     border-radius: 20px;
 }
 @media (max-width:700px){
+
+    .top{
+        margin-top: 25px;
+    }
+    .buttongroup{
+        margin-right: 15px;
+    }
+  .fontSiz{
+      font-size: 20px;
+      margin-bottom: 25px;
+  }
+    .box{
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+  
+    }
+
+    .imgBox{
+    
+      }
+    .imgblog{
+    
+      
+       height: 250px;
+    }
+    .buttongroup{
+        margin-top: 10px;
+        margin-left: 40px;
+    }
+    .sign{
+        color: whitesmoke;
+        font-weight: bold;
+        padding: 15px;
+        margin: 10px;
+        border-radius: 30px;
+        background-color:darkcyan;
+        border: none;
+    }
+    .litext , .foundin {
+        font-size: 18px;
+    }
+    .leader , .abouttext {
+        font-size: 25px;
+    }
+    .linecontainer{
+        margin-right: 10px;
+    }
+    .menufy{
+        margin-left: 20px;
+    }
+    .bigbotton{
+        width: 160px;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: dodgerblue;
+        margin-top: 15px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    .buttonget{
+        margin-left: 35px;
+        width: 160px;
+        background-color:#1F1F1F ;
+        font-size: 15px;
+        font-weight: bold;
+        margin-top: 25px;
+        padding: 15px;
+        color: white;
+        border-radius: 10px;
+    }
+    .buttonit , .learn{
+        width: 140px;
+        padding: 9px;
+        font-size: 10px;
+    }
+    .textsmall {
+        font-size: 18px;
+    }
+    .your , .textmenu , .textre  {
+        font-size: 20px;
+    }
+    .litext  , .orderweb {
+        font-size: 25px;
+    }
+    .foundin , .class , .textpaid{
+        font-size: 25px;
+    }
+    .fontlarge , .leader , .onlinetext , .fontlarge , .leader{
+        font-size: 40px;
+    }
+    .paidimg{
+        width: 200px;
+        height: 150px;
+        margin-bottom: 8px;
+    }
+    .laptop{
+        width: 300px;
+        height:250px;
+    }
+    .textfon{
+     
+        width: 70%;
+       font-size: 35px;
+       margin: 20px  auto;
+       color: #f4f4f4;
+    }
+
     .serving{
-        margin-top: -40px;
+        color: #f4f4f4;
+        width: 70%;
+        margin: 0 auto;
+        font-size: 25px;
+        font-weight: bolder;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-bottom: 50px;
     }
     .buttongroup{
         display: flex;
@@ -615,7 +741,7 @@ p{
     }
     .image{
         width: 100%;
-        height: 650px;
+        height: 400px;
     }
     .imagetest{
         max-width: 100%;
@@ -666,4 +792,7 @@ p{
 .footercontainer{
     height: 850px;
 }
+.smallmenu{
+    font-size: 30px;
+   }
 }
