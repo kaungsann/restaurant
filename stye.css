@@ -635,6 +635,7 @@ p{
         transform: translateY(30px);
     }
     .textsmall {
+        color: darkcyan;
         font-size: 15px;
     }
     .litext{
@@ -865,6 +866,7 @@ p{
         margin-top: 25px;
     }
     .textsmall {
+       color: darkcyan;
         font-size: 15px;
     }
     .litext{
