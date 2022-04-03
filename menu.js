@@ -16,7 +16,28 @@ const pricingcotainerTag = document.querySelector(".pricingcotainer");
 const BlogcontainerTag = document.querySelector(".Blogcontainer");
 
 const Litext = ["home" , "pricing" , "about us" , "blog"];
-;
+
+const clickcontainerTag = document.getElementsByClassName("clickcontainer")[0];
+const inboxTag = document.getElementsByClassName("inbox")[0];
+const bodyTag = document.getElementsByTagName("body")[0];
+
+const moveItems = () => {
+    if(clickcontainerTag.classList.contains("boxmove")){
+        bodyTag.style.backgroundColor ="white";
+        inboxTag.classList.remove("moveRight")
+        clickcontainerTag.classList.remove("boxmove")
+        sliderTag.style.backgroundColor ="white";
+  
+    }else{
+        bodyTag.style.backgroundColor ="black";
+        inboxTag.classList.add("moveRight")
+        clickcontainerTag.classList.add("boxmove")
+        sliderTag.style.backgroundColor ="darkcyan";
+    }
+ 
+}
+inboxTag.addEventListener("click" , moveItems)
+
 const clickfuction = (event) => {
   const clickLiTag = event.target.id;
   console.log(clickLiTag)
@@ -28,16 +49,16 @@ const clickfuction = (event) => {
 
  switch(clickLiTag){
         case "0":
-            allcontainerTag.style.display = "block";  
-            footercontainerTag.style.display = "block";
+            allcontainerTag.style.display = "inline";
+            footercontainerTag.style.display = "inline";
             aboutcontainerTag.style.display = "none";  
             pricingcotainerTag.style.display = "none";  
             BlogcontainerTag.style.display = "none";
             changefunction();
             break;
         case "1":  
-            pricingcotainerTag.style.display ="block"; 
-            pricingcotainerTag.style.display = "block";  
+            footercontainerTag.style.display = "none";
+            pricingcotainerTag.style.display = "inline";  
             allcontainerTag.style.display = "none"; 
             aboutcontainerTag.style.display = "none";
             BlogcontainerTag.style.display = "none";
@@ -46,7 +67,7 @@ const clickfuction = (event) => {
         case "2":          
             allcontainerTag.style.display = "none";
             pricingcotainerTag.style.display = "none";
-            aboutcontainerTag.style.display = "block";
+            aboutcontainerTag.style.display = "inline";
             footercontainerTag.style.display = "none"; 
             BlogcontainerTag.style.display = "none";
             changefunction();
@@ -55,7 +76,7 @@ const clickfuction = (event) => {
             allcontainerTag.style.display = "none";   
             aboutcontainerTag.style.display = "none";  
             pricingcotainerTag.style.display = "none";  
-            BlogcontainerTag.style.display = "block";
+            BlogcontainerTag.style.display = "inline";
             footercontainerTag.style.display = "none";
             changefunction();
             break;
@@ -108,7 +129,7 @@ const clickfuction = (event) => {
 
     setTimeout( () => {
         appearItemsContainer.style.top = `-${appearItemsContainer.offsetHeight}px`
-    }, 4000)
+    }, 5000)
 
     buttonDiv.addEventListener("click" , () => {
         localStorage.setItem("uptext" , "1");
@@ -147,3 +168,22 @@ const clickfuction = (event) => {
             linecontainerTag.classList.add("linecontainernew");
     }
     }
+
+
+function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", reveal);

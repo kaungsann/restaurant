@@ -1,14 +1,61 @@
-body{
+*{
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
-    background-color: #FFFFFF;
-    height: 100%;
 }
+
+.clickcontainer{
+    display: flex;
+    margin-top: 30px;
+    margin-right: 20px;
+    position: fixed;
+    right: 0;
+    width: 50px;
+   height: 30px;
+   border: 3px solid burlywood;
+   border-radius: 30px;
+   cursor: pointer;
+   transition: all 0.4s ease-in-out ;
+   background-color: black;
+}
+.inbox{
+    width: 30px;
+    height: 29px;
+
+    background-color: darkcyan;
+    border-radius: 30px;
+
+    transition: transform 0.4s ease-in-out ;
+}
+.boxmove{
+    background-color:lightblue;
+}
+.moveRight{
+    transform: translateX(20px);
+}
+
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
 .menusticktag{
+
+    z-index: 1;
     position: sticky;
     top: 0;
 }
-
+.allcontainer{
+    scroll-behavior: smooth;
+    transition: all 0.5s ease-in-out ;
+}
 
 .line{
     width: 50px;
@@ -19,6 +66,7 @@ body{
 }
 .menufy{
     margin-left: 20px;
+    font-size: 35px;
 }
 .ulcontainer{
   position: relative;
@@ -39,6 +87,7 @@ li{
     padding:15px 30px;
 }
 .menucontainer{
+    padding: 10px;
     cursor: pointer;
     user-select: none;
     color: lightcyan;
@@ -224,13 +273,14 @@ p{
     justify-content: space-between;
 }
 .footercontainer{
+    scroll-behavior: smooth;
     width: 100%;
-    height: 600px;
+    height: 650px;
     background-color: #1F1F1F;
 }
 .footer{
  
-    padding: 100px 0px;
+    padding: 100px 35px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -239,15 +289,16 @@ p{
 
 }
 .flexbox{
-    font: 25px;
+    font-size: 20px;
     padding: 7px 0px;
 }
 .foot2021{
     color: white;
-    padding: 15px 0px;
+    padding: 10px 0px;
     font-size: 30px;
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 .underline{
     max-width: 80%;
@@ -265,6 +316,7 @@ p{
     flex-direction: row;
     justify-content: center;
     margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 
@@ -285,6 +337,7 @@ p{
     display: none;
 }
 .appeartoast{
+
     background-color: black;
     width: 100%;
     position:fixed;
@@ -299,6 +352,7 @@ p{
     transition: top 0.4s ease-in-out;
 }
 .toastcontainer{
+    z-index: 1;
     position: relative;
 }
 .toastText{
@@ -323,6 +377,7 @@ p{
     font-size: 55px;
 }
 .pricingcotainer{
+    scroll-behavior: smooth;
     margin-top: 100px;
 }
 .percent{
@@ -457,8 +512,11 @@ p{
 .bolder{
     font-weight: bolder;
 }
+.aboutcontainer{
+    scroll-behavior: smooth;
+}
 .Blogcontainer{
-
+    scroll-behavior: smooth;
 }
 .imgboxCOntainer{
       display: flex;
@@ -505,6 +563,106 @@ p{
 }
 
 @media (max-width:764px){
+    .menucontainer{
+        padding: 23px;
+    }
+
+    .line1mew{
+        transform: rotate(45deg) translate(4px,8px);
+    }
+    .line3mew{
+        transform: rotate(-45deg) translate(4px,-8px);
+    }
+  
+    .line{
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 5px ;
+
+        display: block;
+        margin-right: 25px;
+    }
+    .buttontoast{
+        color: inherit;
+        border: none;
+       
+        font-weight: bold;
+        color: white;  
+        padding: 7px;
+        font-size: 12px;
+        background-color:blue;
+        border-radius: 8px;
+        margin: 0 auto;
+    }
+    .toastText{
+        margin-top: 10px;
+        font-size: 20px;
+    
+    
+        width: 80%;
+    }
+    .clickcontainer{
+        display: flex;
+        margin-top: 15px;
+        margin-right: 22px;
+        position: fixed;
+        right: 0;
+        width: 20px;
+       height: 50px;
+       border: 3px solid burlywood;
+       cursor: pointer;
+       transition: all 0.4s ease-in-out ;
+       background-color: black;
+    }
+    .inbox{
+        width: 20px;
+        height: 18px;
+        margin-left: 0px;
+        border: 1px solid rgb(178, 49, 32);
+        background-color:darkcyan;
+        border-radius: 10px;
+        transition: transform 0.4s ease-in-out ;
+    }
+    .boxmove{
+        background-color:lightblue;
+    }
+    .moveRight{
+        transform: translateY(30px);
+    }
+    .textsmall {
+        font-size: 15px;
+    }
+    .litext{
+        font-size: 20px;
+    }
+    .getafree{
+        margin-top: 20px;
+    }
+    .class{
+        font-size: 18px;
+    }
+
+    .fbicon{
+        width: 20px;
+        height: 20px;
+        padding: 8px;
+       
+    }
+    .foot2021{
+        font-size: 20px;
+        padding: 10px 0px;
+        margin-bottom: 50px;
+    }
+    .footercontainer{
+        width: 100%;
+        height: 600px;
+        background-color: #1F1F1F;
+    }
+.flexbox{
+        font: 17px;
+        padding: 4px 0px;
+    }
 .image{
     width: 100%;
       height:700px
@@ -528,11 +686,7 @@ p{
     .learn{
         margin-bottom: 45px;
     }
-    .line{
 
-        display: block;
-        margin-right: 25px;
-    }
     .itcontainer ,.atop{
         margin-top: 30px;
     }
@@ -555,6 +709,7 @@ p{
     }
 
   .overlay{
+    z-index: 1;
     width: 100vw;
     height: 100vh;
     background-color: #212121;
@@ -562,17 +717,19 @@ p{
     display: none;
   }
   .ultaginli{
+      transition: 0.5s;
       padding: 35px;
       display: flex;
       flex-direction: column;
       align-items: center;
       
   }
+
   .ultaginli:hover{
-      color: black;
-      background-color: lightskyblue;
-      border-radius: 15px;
-  }
+    color: black;
+    background-color: rgb(23, 121, 182);
+    border-radius: 15px;
+}
   .ulTagnew{
       max-width: 70%;
       margin: 90px auto;
@@ -580,7 +737,7 @@ p{
       cursor: pointer;
 
 
-    font-size: 30px;
+    font-size: 20px;
      color: white;
      display: block;
   }
@@ -593,6 +750,7 @@ p{
     margin: 20px 0px;
 }
 .linew{
+    transition: 0.6s;
     padding: 50px;
 }
 
@@ -614,8 +772,133 @@ p{
     background-color: cornflowerblue;
     border-radius: 20px;
 }
+.foundin{
+    font-size: 25px;
+    margin-top: 20px;
+}
+.ulTagnew{
+    font-size: 25px;
+  }
 @media (max-width:700px){
+    .ulTagnew{
+      font-size: 20px;
+    }
 
+    .ultaginli:hover{
+        color: black;
+        background-color: rgb(23, 121, 182);
+        border-radius: 15px;
+    }
+    .menucontainer{
+        padding: 18px;
+    }
+    .line1mew{
+        transform: rotate(45deg) translate(4px,8px);
+    }
+    .line3mew{
+        transform: rotate(-45deg) translate(4px,-8px);
+    }
+  
+    .line{
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 5px ;
+
+        display: block;
+        margin-right: 25px;
+    }
+    .buttontoast{
+        color: inherit;
+        border: none;
+       
+        font-weight: bold;
+        color: white;  
+        padding: 7px;
+        font-size: 12px;
+        background-color:blue;
+        border-radius: 8px;
+        margin: 0 auto;
+    }
+    .toastText{
+        margin-top: 45px;
+        font-size: 16px;
+    
+    
+        width: 80%;
+    }
+    .clickcontainer{
+        display: flex;
+        margin-top: 15px;
+        margin-right: 21px;
+        position: fixed;
+        right: 0;
+        width: 20px;
+       height: 40px;
+       border: 3px solid burlywood;
+       cursor: pointer;
+       transition: all 0.4s ease-in-out ;
+       background-color: black;
+    }
+    .inbox{
+        width: 20px;
+        height: 18px;
+        margin-left: 0px;
+        border: 1px solid rgb(178, 49, 32);
+        background-color:darkcyan;
+        border-radius: 10px;
+        transition: transform 0.4s ease-in-out ;
+    }
+    .boxmove{
+        background-color:lightblue;
+    }
+    .moveRight{
+        transform: translateY(20px);
+    }
+
+    .leader{
+        font-size: 30px;
+        margin-top: 25px;
+    }
+    .textsmall {
+        font-size: 15px;
+    }
+    .litext{
+        font-size: 22px;
+    }
+    .foundin{
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    .getafree{
+        margin-top: 20px;
+    }
+    .foot2021{
+        margin-bottom: 50px;
+        font-size: 20px;
+        padding: 10px 0px;
+    }
+    .class{
+        font-size: 18px;
+    }
+
+    .fbicon{
+        width: 20px;
+        height: 20px;
+        padding: 8px;
+       
+    }
+    .foot2021{
+        font-size: 20px;
+    }
+    .flexbox{
+        font-size: 15px;
+        padding: 4px 0px;
+        margin: 0 5px;
+    }
+     .menufy{
+         font-size: 25px;
+     }
     .top{
         margin-top: 25px;
     }
@@ -635,12 +918,9 @@ p{
   
     }
 
-    .imgBox{
-    
-      }
+
     .imgblog{
     
-      
        height: 250px;
     }
     .buttongroup{
@@ -656,10 +936,8 @@ p{
         background-color:darkcyan;
         border: none;
     }
-    .litext , .foundin {
-        font-size: 18px;
-    }
-    .leader , .abouttext {
+
+  .abouttext {
         font-size: 25px;
     }
     .linecontainer{
@@ -693,19 +971,17 @@ p{
         padding: 9px;
         font-size: 10px;
     }
-    .textsmall {
-        font-size: 18px;
-    }
+
     .your , .textmenu , .textre  {
         font-size: 20px;
     }
-    .litext  , .orderweb {
+   .orderweb {
         font-size: 25px;
     }
-    .foundin , .class , .textpaid{
+     .textpaid{
         font-size: 25px;
     }
-    .fontlarge , .leader , .onlinetext , .fontlarge , .leader{
+    .fontlarge ,  .onlinetext , .fontlarge {
         font-size: 40px;
     }
     .paidimg{
@@ -778,10 +1054,7 @@ p{
         justify-content: center;
        margin-top: 10px;
    }
-   .liin:hover{
-    background-color: cornflowerblue;
-    border-radius: 20px;
-}
+
 .callphoto{
     margin-left: 30px;
 }
@@ -790,7 +1063,7 @@ p{
     margin-bottom: 50px;
 }
 .footercontainer{
-    height: 850px;
+    height: 600px;
 }
 .smallmenu{
     font-size: 30px;
