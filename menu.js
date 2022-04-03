@@ -23,16 +23,21 @@ const bodyTag = document.getElementsByTagName("body")[0];
 
 const moveItems = () => {
     if(clickcontainerTag.classList.contains("boxmove")){
-        bodyTag.style.backgroundColor ="white";
+  
+        bodyTag.style.backgroundColor ="white"
+        bodyTag.classList.remove("changecolor")
         inboxTag.classList.remove("moveRight")
         clickcontainerTag.classList.remove("boxmove")
         sliderTag.style.backgroundColor ="white";
+        footercontainerTag.style.backgroundColor = "#1F1F1F";
   
     }else{
         bodyTag.style.backgroundColor ="black";
         inboxTag.classList.add("moveRight")
         clickcontainerTag.classList.add("boxmove")
         sliderTag.style.backgroundColor ="darkcyan";
+        bodyTag.classList.add("changecolor")
+        footercontainerTag.style.backgroundColor = "#1F1F1F";
     }
  
 }
@@ -49,8 +54,8 @@ const clickfuction = (event) => {
 
  switch(clickLiTag){
         case "0":
-            allcontainerTag.style.display = "inline";
-            footercontainerTag.style.display = "inline";
+            allcontainerTag.style.display = "block";
+            footercontainerTag.style.display = "block";
             aboutcontainerTag.style.display = "none";  
             pricingcotainerTag.style.display = "none";  
             BlogcontainerTag.style.display = "none";
@@ -58,7 +63,7 @@ const clickfuction = (event) => {
             break;
         case "1":  
             footercontainerTag.style.display = "none";
-            pricingcotainerTag.style.display = "inline";  
+            pricingcotainerTag.style.display = "block";  
             allcontainerTag.style.display = "none"; 
             aboutcontainerTag.style.display = "none";
             BlogcontainerTag.style.display = "none";
@@ -67,7 +72,7 @@ const clickfuction = (event) => {
         case "2":          
             allcontainerTag.style.display = "none";
             pricingcotainerTag.style.display = "none";
-            aboutcontainerTag.style.display = "inline";
+            aboutcontainerTag.style.display = "block";
             footercontainerTag.style.display = "none"; 
             BlogcontainerTag.style.display = "none";
             changefunction();
@@ -76,7 +81,7 @@ const clickfuction = (event) => {
             allcontainerTag.style.display = "none";   
             aboutcontainerTag.style.display = "none";  
             pricingcotainerTag.style.display = "none";  
-            BlogcontainerTag.style.display = "inline";
+            BlogcontainerTag.style.display = "block";
             footercontainerTag.style.display = "none";
             changefunction();
             break;
